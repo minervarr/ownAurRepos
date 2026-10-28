@@ -1,0 +1,17 @@
+pkgbase = badged-bin
+	pkgdesc = Polkit authentication agent for Linux window managers
+	pkgver = 0.1.0
+	pkgrel = 1
+	url = https://github.com/jfernandez/badged
+	arch = x86_64
+	license = MIT
+	depends = gtk4
+	depends = polkit
+	provides = badged
+	conflicts = badged
+	options = !strip
+	options = !debug
+	source = https://github.com/jfernandez/badged/releases/download/v0.1.0/badged-x86_64-unknown-linux-gnu
+	sha256sums = 37221132eecfb18c3b9aa827c0acd12a4f2bc46a843499f99836258fbda0eaaf
+
+pkgname = badged-bin

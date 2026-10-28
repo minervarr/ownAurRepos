@@ -1,0 +1,20 @@
+# Maintainer: nava <nava@noreply.com>
+
+pkgname=badged-bin
+pkgver=0.1.0
+pkgrel=1
+pkgdesc='Polkit authentication agent for Linux window managers'
+arch=('x86_64')
+url='https://github.com/jfernandez/badged'
+license=('MIT')
+depends=('gtk4' 'polkit')
+provides=('badged')
+conflicts=('badged')
+options=('!strip' '!debug')
+source=("$url/releases/download/v$pkgver/badged-x86_64-unknown-linux-gnu")
+sha256sums=('37221132eecfb18c3b9aa827c0acd12a4f2bc46a843499f99836258fbda0eaaf')
+
+package() {
+    install -Dm755 "$srcdir/badged-x86_64-unknown-linux-gnu" \
+        "$pkgdir/usr/bin/badged"
+}
